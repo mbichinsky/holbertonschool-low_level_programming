@@ -1,4 +1,11 @@
 #include <stdio.h>
+
+/**
+ * main- printing sizes of lines using printf
+ * Description: prints out size of each character type
+ * Return: returns 0 if no issue
+ */
+
 int main(void)
 {
 	printf("Size of a char: %i byte(s)\n", sizeof(char));
