@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "6-abs.c"
 
 /**
  * print_last_digit- prints last number
