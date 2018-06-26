@@ -9,12 +9,11 @@
 void print_alphabet(void)
 {
 
-	int i = 0;
-	char alphabet[] = "a..z";
+	char i = 97;
 
-	for (i = 0; i <= 25; i++)
+	for (i = 97; i <= 122; i++)
 	{
-		_putchar(alphabet[i]);
+		_putchar(i);
 	}
 	_putchar ('\n');
 }
