@@ -1,9 +1,30 @@
 #include "holberton.h"
+#include "2-strlen.c"
 
 /**
- * _isupper - checks for upper case letters
+ * rev_string - reverses a string
  *
- * @c: letter
+ * @s: string to be reversed
  *
- * Return: 1 if caps otherwise 0
+ * Return: Nothing
  */
+
+void rev_string(char *s)
+{
+	int i, j, temp;
+	int size = _strlen(s);
+
+	for (i = 0; i < size; i++)
+	{
+		j = i;
+	}
+	i = 0;
+	while (i < j)
+	{
+		temp = s[i];
+		s[i] = s[j];
+		s[j] = temp;
+		i++;
+		j--;
+	}
+}
