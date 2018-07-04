@@ -1,9 +1,36 @@
 #include "holberton.h"
+#include "2-strlen.c"
 
 /**
- * _isupper - checks for upper case letters
+ * puts_half - prints out the 2nd half of the string
  *
- * @c: letter
+ * @str: string to be segmented and printed
  *
- * Return: 1 if caps otherwise 0
+ * Return: Nothing
  */
+
+void puts_half(char *str)
+{
+	int length = _strlen(str);
+	int i;
+	int j;
+
+	if (length / 2 == 0)
+	{
+		i = length / 2;
+		for (j = i; j <= length; j++)
+		{
+			_putchar(str[j]);
+		}
+	}
+
+	else
+	{
+		i = (length - 1) / 2;
+		for (j = (i + 1); j <= length; j++)
+		{
+			_putchar(str[j]);
+		}
+	}
+	_putchar ('\n');
+}

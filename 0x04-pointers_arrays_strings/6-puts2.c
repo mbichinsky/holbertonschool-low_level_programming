@@ -1,9 +1,25 @@
 #include "holberton.h"
+#include "2-strlen.c"
 
 /**
- * _isupper - checks for upper case letters
+ * puts2 - prints out every other character
  *
- * @c: letter
+ * @str: full string to be printed
  *
- * Return: 1 if caps otherwise 0
+ * Return: Nothing
  */
+
+void puts2(char *str)
+{
+	int i = _strlen(str);
+	int j;
+
+	for (j = 0; j <= i; j++)
+	{
+		if (j % 2 == 0)
+		{
+			_putchar(str[j]);
+		}
+	}
+	_putchar ('\n');
+}
