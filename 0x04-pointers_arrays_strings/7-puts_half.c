@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "2-strlen.c"
 
 /**
  * puts_half - prints out the 2nd half of the string
@@ -7,16 +8,6 @@
  *
  * Return: Nothing
  */
-
-int _strlen(char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-
-	return (i);
-}
 
 void puts_half(char *str)
 {
@@ -27,7 +18,7 @@ void puts_half(char *str)
 	if (length % 2 == 0)
 	{
 		i = length / 2;
-		for (j = i; j <= length; j++)
+		for (j = i; j < length; j++)
 		{
 			_putchar(str[j]);
 		}
