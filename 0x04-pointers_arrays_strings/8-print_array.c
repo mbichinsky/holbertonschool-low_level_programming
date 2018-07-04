@@ -1,9 +1,27 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * _isupper - checks for upper case letters
+ * print_array - holds the array to be printed
  *
- * @c: letter
+ * @a: array
  *
- * Return: 1 if caps otherwise 0
+ * @n: number of elements in the array
+ *
+ * Return: nothing
  */
+
+void print_array(int *a, int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		printf("%d", a[i]);
+		if (i < n - 1)
+		{
+			printf(", ");
+		}
+	}
+	putchar ('\n');
+}
