@@ -2,15 +2,12 @@
 #include "_strlen.c"
 
 /**
- * _memcpy - copies the memory area
+ * _strcat - concatenates two strings, replacing the \0
+ * at the end of the first
  *
  * @dest: second string
  *
  * @src: first string
  *
- * Return: pointer to dest
+ * Return: dest string
  */
-
-char *_memcpy(char *dest, char *src, unsigned int n)
-{
-}

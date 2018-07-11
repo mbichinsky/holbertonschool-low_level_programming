@@ -1,17 +1,25 @@
 #include "holberton.h"
+#include "_strlen.c"
 
 /**
- * _memset - fills memory with a constant byte
+ * _memcpy - copies the memory area
  *
- * @s: memory area
+ * @n: bytes to be copied
  *
- * @b: constant byte
+ * @dest: second string
  *
- * @n: first byte
+ * @src: first string
  *
- * Return: pointer to memory area s
+ * Return: pointer to dest
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
+	unsigned int i;
+
+	for (i = 0; i < n; i++);
+	{
+		dest[i] = src[i];
+	}
+	return (dest);
 }
