@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include "_putchar.c"
 
 /**
  * _puts_recursion - prints a string, followed by new line
