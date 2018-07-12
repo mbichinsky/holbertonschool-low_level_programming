@@ -20,6 +20,10 @@ int find_prime(int i, int n)
 	{
 		return (find_prime(i + 1, n));
 	}
+	else if (n < 0)
+	{
+		return (0);
+	}
 	else
 	{
 		return (1);

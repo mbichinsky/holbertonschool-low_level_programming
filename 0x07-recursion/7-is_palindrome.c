@@ -34,18 +34,19 @@ int _strlen_recursion(char *s)
 
 int char_test(int start, int end, char *s)
 {
-	if (s[start] != s[end])
+	if (start < end)
 	{
-		char_test(start + 1, end - 1, s);
-		return (0);
+		if (s[start] == s[end])
+		{
+			return (char_test(start + 1, end - 1, s));
+		}
+		else
+		{
+			return (0);
+		}
 	}
-	else
 	{
 		return (1);
-	}
-	if (start > end)
-	{
-		return (0);
 	}
 }
 
