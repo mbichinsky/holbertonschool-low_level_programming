@@ -25,7 +25,7 @@ char *_strstr(char *haystack, char *needle)
 				match = 0;
 				break;
 			}
-  		}
+		}
 		if (match == 1)
 		{
 			return (haystack);
