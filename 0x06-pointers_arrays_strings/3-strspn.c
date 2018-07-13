@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include "_strlen.c"
+#include "2-strchr.c"
 
 /**
  * _strspn - function that gets the length of a prefix substring
@@ -13,23 +13,11 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	int i, j;
-	int count = 0;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (*s && _strchr(accept, *s++))
 	{
-		for (j = 0; accept[j] != _strlen(s); j++)
-		{
-			if (accept[j] == s[i])
-			{
-				count++;
-				break;
-			}
-		}
-		if (accept[j] != s[i])
-		{
-			return (count);
-		}
+		i++;
 	}
-	return (count);
+	return (i);
 }
