@@ -2,12 +2,34 @@
 #include "_strlen.c"
 
 /**
- * _strcat - concatenates two strings, replacing the \0
- * at the end of the first
+ * _strspn - function that gets the length of a prefix substring
  *
- * @dest: second string
+ * @s: string to be searched
  *
- * @src: first string
+ * @accept: string containing the list of characters to match in s
  *
- * Return: dest string
+ * Return: the number of bytes
  */
+
+unsigned int _strspn(char *s, char *accept)
+{
+	int i, j;
+	int count = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		for (j = 0; accept[j] != _strlen(s); j++)
+		{
+			if (accept[j] == s[i])
+			{
+				count++;
+				break;
+			}
+		}
+		if (accept[j] != s[i])
+		{
+			return (count);
+		}
+	}
+	return (count);
+}
