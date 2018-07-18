@@ -18,16 +18,20 @@ char *_strdup(char *str)
 	char *pointer;
 	int i, length;
 
+	if (str == NULL)
+        {
+                return (NULL);
+        }
 	for (i = 0; str[i] != '\0'; i++)
 		;
 	length = i;
-	pointer = malloc(sizeof(char) * length);
+	pointer = malloc(sizeof(char) * length + 1);
 	for (i = 0; i <= length; i++)
 	{
 		pointer[i] = str[i];
 	}
 	pointer[i] = '\0';
-	if (pointer == NULL || str == NULL)
+	if (pointer == NULL)
 	{
 		return (NULL);
 	}
