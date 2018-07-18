@@ -22,18 +22,17 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	for (i = 0; str[i] != '\0'; i++)
+	for (length = 0; str[length] != '\0'; length++)
 		;
-	length = i;
 	pointer = malloc(sizeof(char) * length + 1);
+	if (pointer == NULL)
+	{
+		return (NULL);
+	}
 	for (i = 0; i <= length; i++)
 	{
 		pointer[i] = str[i];
 	}
 	pointer[i] = '\0';
-	if (pointer == NULL)
-	{
-		return (NULL);
-	}
 	return (pointer);
 }
