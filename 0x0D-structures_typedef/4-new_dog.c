@@ -16,3 +16,38 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *newdog;
+	char *old_name, *old_owner;
+
+	if (name == NULL || owner == NULL)
+	{
+		return (NULL);
+	}
+
+	newdog = malloc(sizeof(dog_t));
+	old_name = _strdup(name);
+	old_owner = _strdup(owner);
+
+	if (newdog == NULL)
+	{
+		return (NULL);
+	}
+
+	if (old_name == NULL)
+	{
+		free(newdog);
+		return (NULL);
+	}
+
+	if (old_owner == NULL)
+	{
+		free(newdog);
+		free(old_name);
+		return (NULL);
+	}
+
+	newdog->name = name;
+	newdog->age = age;
+	newdog->owner = owner;
+	return (newdog);
+}
