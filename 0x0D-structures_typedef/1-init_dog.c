@@ -6,7 +6,7 @@
  * init_dog - Define a new type struct dog with the following:
  *
  * @d: struct
- * 
+ *
  * @name: dogs name
  *
  * @age: dogs age
